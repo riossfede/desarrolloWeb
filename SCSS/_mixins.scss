@@ -1,0 +1,25 @@
+@mixin button-styles($bg-color, $hover-color) {
+    background-color: $bg-color;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: $border-radius;
+  
+    &:hover {
+      background-color: $hover-color;
+      animation: hoverAnim 0.3s ease-in-out;
+    }
+  }
+  
+  @keyframes hoverAnim {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

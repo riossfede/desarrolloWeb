@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: $font-stack;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: $primary-color;
+    color: white;
+    padding: $spacing-unit;
+  
+    .search-bar {
+      margin-top: $spacing-unit;
+      display: flex;
+      justify-content: center;
+  
+      input {
+        padding: 0.5rem;
+        width: 80%;
+        max-width: 400px;
+      }
+    }
+  }
+  
+  footer {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: $spacing-unit;
+  
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: $spacing-unit 0;
+  
+      li {
+        margin: 0 1rem;
+  
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  button {
+    @include button-styles($primary-color, $highlight-color);
+  }
+  
+  .card {
+    background-color: $secondary-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: $spacing-unit;
+    text-align: center;
+  
+    h4, p {
+      @extend .text-common;
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .price {
+      font-size: 1.2rem;
+      color: $primary-color;
+      margin: $spacing-unit 0;
+    }
+  }
+  
+  .text-common {
+    color: $text-color;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-unit;
+  }
+
+  footer {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: $spacing-unit;
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: $spacing-unit 0;
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
